@@ -3,23 +3,25 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+  <h1>Futuristic app!</h1>
+  {{> todolist}}
   {{> info}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="todolist">
+<ul>{{#each todos}}{{>todo}}{{/each}}</ul>
 </template>
 
+<template name="todo">
+  <li class="{{#unless done}}done{{/unless}}">{{text}}  </li>
+</template>
+
+
+
 <template name="info">
-  <h2>Learn Meteor!</h2>
+  <h2>Learn more!</h2>
   <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+    <li><a href="https://www.facebook.com/ironkingdomrobotics/?ref=bookmarks" target="_blank">Ironkingdomrobotics</a></li>
+
   </ul>
 </template>

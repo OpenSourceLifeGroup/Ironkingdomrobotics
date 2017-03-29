@@ -5,15 +5,19 @@
 <body>
   <h1>Futuristic app!</h1>
   {{> todolist}}
+<button id="button" name="button">add</button>
   {{> info}}
-</body>
 
+</body>
+    
 <template name="todolist">
 <ul>{{#each todos}}{{>todo}}{{/each}}</ul>
+
 </template>
 
 <template name="todo">
   <li class="{{#unless done}}done{{/unless}}">{{text}}  </li>
+
 </template>
 
 
